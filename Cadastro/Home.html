@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="Style_Home.css">
+    <main>
+        <section>
+            <div id="Content-Left">
+                <div id="img"></div>
+                <div id="input_registrar">
+                    <a href="Registro.html"><input type="button" value="Registrar" class="button"></a>
+                </div>
+            </div>
+
+            <div id="Content-Right">
+                <h1 class="desc">Bem-vindo ao <br>
+                    Portal do Cliente</h1>
+                   <p class="desc" id="p-desc">Preencha os campos abaixo <br>
+                    para ter acesso ao sistema</p>
+                <div id="inputs">
+
+                    
+                    <input type="text" name="Nome" id="nome" placeholder="Nome">
+                    <p id="nomeInvalido" class="Invalido"></p>
+                    <input type="email" name="Email" id="email" placeholder="Email">
+                    <p id="emailInvalido" class="Invalido"></p>
+                    <input type="password" name="Senha" id="senha" placeholder="Senha">
+                    <p id="passInvalido" class="Invalido"></p>
+                    <input type="button" value="Entrar" onclick="validaCampos()" class="button B">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        //Criar tela de cadastro com campos obrigatorios
+        const nome = document.getElementById('nome');
+        const email = document.getElementById('email');
+        const senha = document.getElementById('senha');
+
+        function validaCampos() {
+            if (nome.value === "" || isNaN(nome.value) === false) {
+                document.getElementById('nomeInvalido').innerText = 'Informe o nome corretamente'
+                nome.focus()
+
+            }else{
+                document.getElementById('nomeInvalido').innerText = ''
+            }
+
+            const validaEmail = function (email) {
+                return /^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/.test(email.value) //Valida formato de email
+            };
+
+            if (validaEmail(email) != true) { //Verifica se formato é True ou False
+                document.getElementById('emailInvalido').innerText = 'Informe o e-mail'
+                email.focus()
+
+            }else{
+                document.getElementById('emailInvalido').innerText = ''
+            };
+            
+            if (senha.value.length < 6) {
+                document.getElementById('passInvalido').innerText = 'Informe a senha'
+                senha.focus()
+            } else {
+                document.getElementById('passInvalido').innerText = ''
+            }
+            if(nome.value === true)
+            window.location.reload();
+        }   
+    </script>
+</body>
+
+</html>

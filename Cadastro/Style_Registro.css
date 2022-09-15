@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(60, 179, 114, 0.288);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+section{
+    width: 380px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color:white;
+}
+#img{
+    width: 220px;
+    height: 100px;
+    background-image: url("https://images-platform.99static.com/OngdeIWxHuoFI-V48VJZCm3AsfM=/500x500/top/smart/99designs-contests-attachments/42/42772/attachment_42772488");
+    background-size: 28em;
+    background-position: center;
+    margin-right: 48px;
+    border: none;
+}
+.content{
+    padding: 15px;
+}
+#Button{
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 19px;
+}
+
+.label-float{
+    position: relative;
+    padding-top: 13px;
+
+}
+.label-float input{
+    border: 1px solid lightslategrey;
+    border-radius: 5px;
+    outline: none;
+    min-width: 250px;
+    padding: 12px 20px;
+    font-size: 19px;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all 1.s linear;
+    -webkit-appearance: none;
+}
+.label-float input:focus{
+    border: 2px solid steelblue;
+}
+.label-float input::placeholder{
+    color: transparent;
+}
+.label-float label{
+    pointer-events: none;
+    position: absolute;
+    top: calc(30% ); /* Altera centralização*/
+    left: 13px;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    background-color:rgb(255, 255, 255);
+    padding: 4px; /* Altera flutuação*/
+    box-sizing: border-box;
+}
+.label-float input:required:invalid + label{
+    color: rebeccapurple;
+}
+.label-float input:focus:required:invalid{
+    border: 2px solid blue;
+}
+.label-float input:required:invalid + label:before{
+    content: '*';
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label{
+    font-size: 14px;
+    top: 0;
+    color: black;
+}

@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(60, 179, 114, 0.288);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    width: 730px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#Content-Left{
+    border-radius: 10px 0 0 10px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:white;
+}
+#Content-Right{
+    border-radius: 0 10px 10px 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(46, 139, 86, 0.253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+input{
+    margin: 10px;
+    font-size: 1.4em;
+    border: none;
+    border-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.401);
+    box-shadow: 0;
+    outline: 0;
+    background-color: transparent;
+}
+.Invalido{
+    color: rgb(199, 33, 33);
+    font-size: 0.8em;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.button{
+    cursor: pointer;
+    border: none;
+    font-size: 1.4em;
+    padding: 10px;
+    background-color: transparent;
+    color: black;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+}
+#img{
+    width: 220px;
+    height: 220px;
+    background-image: url("https://images-platform.99static.com/OngdeIWxHuoFI-V48VJZCm3AsfM=/500x500/top/smart/99designs-contests-attachments/42/42772/attachment_42772488");
+    background-size: 28em;
+    background-position: center;
+    margin-right: 45px;
+}
+.desc{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 30px;
+
+}
+#p-desc{
+    font-size: 0.9em;
+    line-height: 18px;
+}
+
+#Registro{
+    border-radius: 10px ;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:white;
+}
